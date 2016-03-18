@@ -1,0 +1,27 @@
+{
+  "name": "dropbox.js",
+  "version": "0.0.1",
+  "description": "Node.js library for the Dropbox API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrempel/dropbox.js.git"
+  },
+  "keywords": [
+    "dropbox",
+    "api",
+    "library",
+    "node",
+    "nodejs",
+    "node.js"
+  ],
+  "author": "Nick Rempel <nbrempel@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nrempel/dropbox.js/issues"
+  },
+  "homepage": "https://github.com/nrempel/dropbox.js#readme"
+}
