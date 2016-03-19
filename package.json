@@ -4,7 +4,8 @@
   "description": "Node.js library for the Dropbox API",
   "main": "index.js",
   "scripts": {
-    "test": "node test/** | faucet"
+    "lint": "jscs .",
+    "test": "npm run lint && node test/* | faucet"
   },
   "repository": {
     "type": "git",
