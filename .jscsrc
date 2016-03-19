@@ -1,3 +1,8 @@
 {
-	"preset": "node-style-guide"
+	"preset": "node-style-guide",
+  "disallowSpacesInFunction": false,
+  "requireSpacesInFunction": {
+    "beforeOpeningRoundBrace": true,
+    "beforeOpeningCurlyBrace": true
+  }
 }
