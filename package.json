@@ -27,6 +27,7 @@
   "homepage": "https://github.com/nrempel/dropbox.js#readme",
   "devDependencies": {
     "faucet": "0.0.1",
+    "jscs": "^2.11.0",
     "tape": "^4.5.1"
   }
 }
