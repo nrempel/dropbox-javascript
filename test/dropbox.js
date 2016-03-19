@@ -10,5 +10,5 @@ test('Dropbox() should have sane defaults', function (t) {
   t.same(dropbox.api.port, '443');
   t.same(dropbox.api.basePath, '/2/');
   t.same(dropbox.api.timeout, 120000);
-  t.end();
+  
 });
