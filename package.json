@@ -26,7 +26,9 @@
   },
   "homepage": "https://github.com/nrempel/dropbox.js#readme",
   "devDependencies": {
+    "codecov": "^1.0.1",
     "faucet": "0.0.1",
+    "istanbul": "^0.4.2",
     "jscs": "^2.11.0",
     "tape": "^4.5.1"
   }
