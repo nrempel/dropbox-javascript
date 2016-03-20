@@ -1,6 +1,5 @@
 test:
   override:
     - npm run lint
-    - node test/* | tap-xunit
-    - npm run cover
+    - npm run coverage
     - codecov
