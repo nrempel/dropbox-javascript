@@ -6,5 +6,8 @@
     "beforeOpeningCurlyBrace": true
   },
   "requireSemicolons": true,
-  "requireDotNotation": true
+  "requireDotNotation": true,
+  "excludeFiles": [
+    "coverage/*"
+  ]
 }

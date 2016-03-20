@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "jscs .",
-    "test": "npm run lint && node test/* | faucet"
+    "test": "npm run lint && node test/* | faucet",
+    "cover": "istanbul cover test/* && codecov",
+    "ci": "npm run test && npm run cover"
   },
   "repository": {
     "type": "git",
