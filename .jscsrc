@@ -4,5 +4,7 @@
   "requireSpacesInFunction": {
     "beforeOpeningRoundBrace": true,
     "beforeOpeningCurlyBrace": true
-  }
+  },
+  "requireSemicolons": true,
+  "requireDotNotation": true
 }
