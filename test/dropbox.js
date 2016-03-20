@@ -19,3 +19,10 @@ test('dropbox.setApiKey() should correctly set the key', function (t) {
   t.same(dropbox.api.auth, 'Bearer other-key');
   t.end();
 });
+
+test('dropbox.setApiKey() should be a no-op if no key passed', function (t) {
+  var dropbox = new Dropbox('api-key');
+  dropbox.setApiKey();
+  t.same(dropbox.api.auth, 'Bearer api-key');
+  t.end();
+});
