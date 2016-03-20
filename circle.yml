@@ -1,3 +1,5 @@
 test:
   override:
-    - npm run lint && npm run cover | npm run xunit && codecov
+    - npm run lint
+    - npm run cover tap-xunit
+    - codecov

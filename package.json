@@ -6,8 +6,7 @@
   "scripts": {
     "lint": "jscs .",
     "test": "npm run lint && node test/* | faucet",
-    "cover": "istanbul cover test/*",
-    "xunit": "tap-xunit"
+    "cover": "istanbul cover test/*"
   },
   "repository": {
     "type": "git",
