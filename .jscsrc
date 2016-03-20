@@ -9,5 +9,6 @@
   "requireDotNotation": true,
   "excludeFiles": [
     "coverage/*"
-  ]
+  ],
+  "requirePaddingNewLinesAfterUseStrict": true
 }
