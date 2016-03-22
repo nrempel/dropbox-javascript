@@ -1,6 +1,6 @@
-# 📬 dropbox.js
 [![Build status][ci-image]][ci-url]
 [![Code coverage][codecov-image]][codecov-url]
+# 📬 dropbox.js
 
 Node.js library for the Dropbox API
 
