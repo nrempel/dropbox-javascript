@@ -1,10 +1,8 @@
-'use strict';
+const test = require('tape').test;
+const Dropbox = require('../lib/dropbox');
 
-var test = require('tape').test;
-var Dropbox = require('../lib/dropbox');
-
-test('Dropbox() should have sane defaults', function (t) {
-  var dropbox = new Dropbox('api-key');
+test('Dropbox() should have sane defaults', (t) => {
+  const dropbox = new Dropbox('api-key');
   t.same(dropbox._config.auth, 'Bearer api-key');
   t.same(dropbox._config.host, 'dropboxapi.com');
   t.same(dropbox._config.port, '443');
@@ -13,15 +11,15 @@ test('Dropbox() should have sane defaults', function (t) {
   t.end();
 });
 
-test('dropbox.setApiKey() should correctly set the key', function (t) {
-  var dropbox = new Dropbox('api-key');
+test('dropbox.setApiKey() should correctly set the key', (t) => {
+  const dropbox = new Dropbox('api-key');
   dropbox.setApiKey('other-key');
   t.same(dropbox._config.auth, 'Bearer other-key');
   t.end();
 });
 
-test('dropbox.setApiKey() should be a no-op if no key passed', function (t) {
-  var dropbox = new Dropbox('api-key');
+test('dropbox.setApiKey() should be a no-op if no key passed', (t) => {
+  const dropbox = new Dropbox('api-key');
   dropbox.setApiKey();
   t.same(dropbox._config.auth, 'Bearer api-key');
   t.end();

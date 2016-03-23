@@ -1,22 +1,17 @@
-'use strict';
+const Endpoint = require('./Endpoint');
 
-var util = require('util');
-var Endpoint = require('./Endpoint');
+class Files extends Endpoint {
+  constructor(config) {
+    super(config);
+    this.path = '/files/copy';
+  }
 
-function Files (config) {
-  Endpoint.call(this, config);
-  this.super = this.constructor.super_.prototype;
-
-  this._path = '/files/copy';
-
-  this.copy = function (fromPath, toPath) {
-    this.super.request.call(this, {
-      'from_path': fromPath,
-      'to_path': toPath
+  copy(fromPath, toPath) {
+    this.request({
+      from_path: fromPath,
+      to_path: toPath,
     });
-  };
+  }
 }
-
-util.inherits(Files, Endpoint);
 
 module.exports = Files;

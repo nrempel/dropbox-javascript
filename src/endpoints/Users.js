@@ -1,14 +1,7 @@
-'use strict';
+const Endpoint = require('./Endpoint');
 
-var util = require('util');
-var Endpoint = require('./Endpoint');
+class Users extends Endpoint {
 
-function Users () { }
-
-util.inherits(Users, Endpoint);
-
-Users.prototype = {
-
-};
+}
 
 module.exports = Users;
