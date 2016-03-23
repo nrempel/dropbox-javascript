@@ -16,11 +16,6 @@ const ENDPOINTS = {
 class Dropbox {
 
   constructor(key) {
-    if (!(this instanceof Dropbox)) {
-      // TODO: Throw error (must instantiate with key)
-      return;
-    }
-
     this._config = {
       auth: null,
       host: DEFAULT_HOST,

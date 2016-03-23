@@ -11,6 +11,15 @@ test('Dropbox() should have sane defaults', (t) => {
   t.end();
 });
 
+test('Dropbox() should fail if called as function', (t) => {
+  t.throws(() => {
+    /*eslint-disable*/
+    const dropbox = Dropbox('api-key');
+    /*eslint-enable*/
+  });
+  t.end();
+});
+
 test('dropbox.setApiKey() should correctly set the key', (t) => {
   const dropbox = new Dropbox('api-key');
   dropbox.setApiKey('other-key');
