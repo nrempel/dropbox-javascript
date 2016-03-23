@@ -2,7 +2,7 @@
 [![Code coverage][codecov-image]][codecov-url]
 # Dropbox Javascript API
 
-Node.js library for the Dropbox API
+Javascript library for the Dropbox API
 
 [ci-image]: https://img.shields.io/circleci/project/nrempel/dropbox.js/master.svg
 [ci-url]: https://circleci.com/gh/nrempel/dropbox.js/tree/master
