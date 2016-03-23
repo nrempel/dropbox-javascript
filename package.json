@@ -8,7 +8,7 @@
     "coverage": "istanbul cover test/*",
     "lint": "eslint src/** test/**",
     "test": "npm run build && node test/* | faucet",
-    "preinstall": "node node_modules/fbjs-scripts/node/check-dev-engines.js package.json"
+    "postinstall": "node node_modules/fbjs-scripts/node/check-dev-engines.js package.json"
   },
   "repository": {
     "type": "git",
