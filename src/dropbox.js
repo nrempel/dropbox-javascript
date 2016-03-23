@@ -15,7 +15,7 @@ var endpoints = {
   users: require('./endpoints/Users')
 };
 
-function Dropbox(key) {
+function Dropbox (key) {
   if (!(this instanceof Dropbox)) {
     // TODO: Throw error (must instantiate with key)
     return;

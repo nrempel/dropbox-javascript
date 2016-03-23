@@ -3,10 +3,12 @@
 var util = require('util');
 var Endpoint = require('./Endpoint');
 
-function Sharing() {}
+function Sharing () { }
 
 util.inherits(Sharing, Endpoint);
 
-Sharing.prototype = {};
+Sharing.prototype = {
+
+};
 
 module.exports = Sharing;

@@ -2,7 +2,7 @@
 
 var https = require('https');
 
-function Endpoint(config) {
+function Endpoint (config) {
   this._config = config;
 }
 

@@ -3,7 +3,7 @@
 var util = require('util');
 var Endpoint = require('./Endpoint');
 
-function Files(config) {
+function Files (config) {
   Endpoint.call(this, config);
   this.super = this.constructor.super_.prototype;
 
