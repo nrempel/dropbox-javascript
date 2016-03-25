@@ -1,13 +1,17 @@
 const https = require('https');
 
+const DropboxError = require('../DropboxError');
+const DropboxResponse = require('../DropboxResponse');
+
 class Endpoint {
   constructor(config) {
     this._config = config;
   }
 
-  request(payload) {
+  request(payload, callback) {
     const content = JSON.stringify(payload);
-    const request = https.request({
+
+    const options = {
       host: `${this._config.rpcSubdomain}.${this._config.host}`,
       path: `${this._config.basePath}${this.path}`,
       port: this._config.port,
@@ -15,18 +19,31 @@ class Endpoint {
       headers: {
         'Content-Type': 'application/json',
         'Content-Length': Buffer.byteLength(content),
-        Authorization: 'Bearer VOCD0Nx_YrkAAAAAAACMeWDJ5dn1hWbutUBaBNJprg-felUOrR18yAuYb21Paq6D',
+        Authorization: this._config.auth,
       },
-    }, (response) => {
+    };
+
+    const request = https.request(options, (response) => {
+      const statusCode = response.statusCode;
+      const statusMessage = response.statusMessage;
+      let data = '';
+
       response.on('data', (chunk) => {
-        console.log(`BODY: ${chunk}`);
+        data += chunk;
       });
 
       response.on('end', () => {
-        console.log('No more data in response.');
+        callback(
+          null,
+          new DropboxResponse(statusCode, statusMessage, JSON.parse(data))
+        );
       });
     });
-    console.log(this);
+
+    request.on('error', (error) => {
+      callback(new DropboxError(error.code), null);
+    });
+
     request.write(content);
     request.end();
   }

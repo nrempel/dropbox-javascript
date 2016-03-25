@@ -6,11 +6,11 @@ class Files extends Endpoint {
     this.path = '/files/copy';
   }
 
-  copy(fromPath, toPath) {
+  copy(fromPath, toPath, callback) {
     this.request({
       from_path: fromPath,
       to_path: toPath,
-    });
+    }, callback);
   }
 }
 

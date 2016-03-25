@@ -27,7 +27,7 @@ class Dropbox {
       version: PACKAGE_VERSION,
     };
 
-    // Instantiate all of our endpoints and add instances to 'this'
+    // Instantiate all of our endpoints
     for (const endpoint in ENDPOINTS) {
       if ({}.hasOwnProperty.call(ENDPOINTS, endpoint)) {
         this[endpoint] = new ENDPOINTS[endpoint](this._config);

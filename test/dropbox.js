@@ -1,7 +1,7 @@
 const test = require('tape').test;
 const Dropbox = require('../lib/dropbox');
 
-test('Dropbox() should have sane defaults', (t) => {
+test('Dropbox._config should have sane defaults', (t) => {
   const dropbox = new Dropbox('api-key');
   t.same(dropbox._config.auth, 'Bearer api-key');
   t.same(dropbox._config.host, 'dropboxapi.com');
@@ -11,7 +11,7 @@ test('Dropbox() should have sane defaults', (t) => {
   t.end();
 });
 
-test('Dropbox() should fail if called as function', (t) => {
+test('Dropbox should fail if called as function', (t) => {
   t.throws(() => {
     /*eslint-disable*/
     const dropbox = Dropbox('api-key');
