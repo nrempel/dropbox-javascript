@@ -1,5 +1,5 @@
 const test = require('tape').test;
-const Dropbox = require('../lib/dropbox');
+const Dropbox = require('../lib/Dropbox');
 
 test('Dropbox._config should have sane defaults', (t) => {
   const dropbox = new Dropbox('api-key');
