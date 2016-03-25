@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel src -d lib -s",
     "coverage": "npm run build && istanbul cover tape 'test/**/*.js' && npm run mapcoverage",
-    "mapcoverage": "remap-istanbul -i coverage/coverage.json -o coverage/mapped-lcov-report -t html",
+    "mapcoverage": "remap-istanbul -i coverage/coverage.json -o coverage/mapped-lcov-report -t html && remap-istanbul -i coverage/coverage.json -t text-lcov > coverage/lcov.info",
     "checkcoverage": "npm run coverage && open ./coverage/mapped-lcov-report/index.html",
     "lint": "eslint src/** test/**",
     "test": "npm run build && tape 'test/**/*.js' | faucet",
@@ -45,7 +45,7 @@
     "faucet": "0.0.1",
     "fbjs-scripts": "^0.5.0",
     "istanbul": "^0.4.2",
-    "remap-istanbul": "^0.5.1",
+    "remap-istanbul": "git://github.com/SitePen/remap-istanbul.git#30b67ad3f24ba7e0da8b8888d5a7c3c8480d48b2",
     "tape": "^4.5.1"
   }
 }
