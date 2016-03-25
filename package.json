@@ -1,5 +1,5 @@
 {
-  "name": "dropbox-javascript",
+  "name": "dropbox-api",
   "version": "0.0.3",
   "description": "Javascript library for the Dropbox API",
   "main": "index.js",
@@ -43,7 +43,6 @@
     "faucet": "0.0.1",
     "fbjs-scripts": "^0.5.0",
     "istanbul": "^0.4.2",
-    "tap": "^5.7.0",
     "tape": "^4.5.1"
   }
 }
