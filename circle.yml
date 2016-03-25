@@ -3,7 +3,6 @@ machine:
     version: 4.0.0
 test:
   override:
-    - npm run build
     - npm run lint
     - npm run coverage
     - npm run codeclimate

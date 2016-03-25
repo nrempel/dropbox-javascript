@@ -28,11 +28,9 @@ class Dropbox {
     };
 
     // Instantiate all of our endpoints
-    for (const endpoint in ENDPOINTS) {
-      if ({}.hasOwnProperty.call(ENDPOINTS, endpoint)) {
-        this[endpoint] = new ENDPOINTS[endpoint](this._config);
-      }
-    }
+    Object.keys(ENDPOINTS).forEach((endpoint) => {
+      this[endpoint] = new ENDPOINTS[endpoint](this._config);
+    });
 
     this.setApiKey(key);
   }
