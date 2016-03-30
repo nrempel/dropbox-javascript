@@ -1,3 +1,4 @@
+[![NPM Version][npm-image]][npm-url]
 [![Build Status][ci-image]][ci-url]
 [![Code Climate][codeclimate-gpa-image]][codeclimate-gpa-url]
 [![Test Coverage][codeclimate-test-image]][codeclimate-test-url]
@@ -9,6 +10,8 @@ Javascript library for the Dropbox API
 
 work in progress
 
+[npm-image]: https://img.shields.io/npm/v/dropbox-api.svg
+[npm-url]: https://www.npmjs.com/package/dropbox-api
 [ci-image]: https://img.shields.io/circleci/project/nrempel/dropbox-javascript/master.svg
 [ci-url]: https://circleci.com/gh/nrempel/dropbox-javascript/tree/master
 [codeclimate-gpa-image]: https://codeclimate.com/github/nrempel/dropbox-javascript/badges/gpa.svg
