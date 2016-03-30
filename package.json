@@ -2,7 +2,7 @@
   "name": "dropbox-api",
   "version": "0.1.2",
   "description": "Javascript library for the Dropbox API",
-  "main": "index.js",
+  "main": "lib/dropbox.js",
   "scripts": {
     "build": "babel src -d lib -s",
     "test": "npm run build && tape 'test/**/*.js'",

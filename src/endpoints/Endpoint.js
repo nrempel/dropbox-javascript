@@ -59,6 +59,7 @@ class Endpoint {
 
     request.write(content);
     request.end();
+    return request;
   }
 }
 
