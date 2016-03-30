@@ -1,6 +1,5 @@
 const https = require('https');
 
-const DropboxError = require('../DropboxError');
 const DropboxResponse = require('../DropboxResponse');
 
 class Endpoint {
@@ -33,15 +32,29 @@ class Endpoint {
       });
 
       response.on('end', () => {
+        let parsedData = {};
+        if (data) {
+          try {
+            parsedData = JSON.parse(data);
+          } catch (error) {
+            callback(error, null);
+            return;
+          }
+        }
         callback(
           null,
-          new DropboxResponse(statusCode, statusMessage, JSON.parse(data))
+          new DropboxResponse(
+            statusCode,
+            statusMessage,
+            parsedData)
         );
+        return;
       });
     });
 
     request.on('error', (error) => {
-      callback(new DropboxError(error.code), null);
+      callback(error, null);
+      return;
     });
 
     request.write(content);

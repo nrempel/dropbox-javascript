@@ -1,6 +1,6 @@
 const DEFAULT_HOST = 'dropboxapi.com';
 const DEFAULT_PORT = '443';
-const DEFAULT_BASE_PATH = '/2/';
+const DEFAULT_BASE_PATH = '/2';
 const DEFAULT_TIMEOUT = require('http').createServer().timeout;
 
 const PACKAGE_VERSION = require('../package.json').version;

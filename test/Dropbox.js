@@ -6,7 +6,7 @@ test('Dropbox._config should have sane defaults', (t) => {
   t.same(dropbox._config.auth, 'Bearer api-key');
   t.same(dropbox._config.host, 'dropboxapi.com');
   t.same(dropbox._config.port, '443');
-  t.same(dropbox._config.basePath, '/2/');
+  t.same(dropbox._config.basePath, '/2');
   t.same(dropbox._config.timeout, 120000);
   t.end();
 });
