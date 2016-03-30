@@ -1,6 +1,7 @@
 const DEFAULT_HOST = 'dropboxapi.com';
 const DEFAULT_PORT = '443';
 const DEFAULT_BASE_PATH = '/2';
+const DEFAULT_CONTENT_TYPE = 'application/json';
 const DEFAULT_TIMEOUT = require('http').createServer().timeout;
 
 const PACKAGE_VERSION = require('../package.json').version;
@@ -21,6 +22,7 @@ class Dropbox {
       host: DEFAULT_HOST,
       port: DEFAULT_PORT,
       basePath: DEFAULT_BASE_PATH,
+      contentType: DEFAULT_CONTENT_TYPE,
       timeout: DEFAULT_TIMEOUT,
       rpcSubdomain: RPC_SUBDOMAIN,
       contentSubdomain: CONTENT_SUBDOMAIN,

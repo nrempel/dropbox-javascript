@@ -7,22 +7,22 @@ class Endpoint {
     this._config = config;
   }
 
-  request(payload, path, callback) {
+  request(payload, options, callback) {
     const content = JSON.stringify(payload);
 
-    const options = {
-      host: `${this._config.rpcSubdomain}.${this._config.host}`,
-      path: `${this._config.basePath}${path}`,
+    const requestOptions = {
+      host: `${options.subdomain}.${this._config.host}`,
+      path: `${this._config.basePath}${options.path}`,
       port: this._config.port,
-      method: 'POST',
+      method: options.method,
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': this._config.contentType,
         'Content-Length': Buffer.byteLength(content),
         Authorization: this._config.auth,
       },
     };
 
-    const request = https.request(options, (response) => {
+    const request = https.request(requestOptions, (response) => {
       const statusCode = response.statusCode;
       const statusMessage = response.statusMessage;
       let data = '';

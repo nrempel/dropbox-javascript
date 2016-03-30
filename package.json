@@ -1,6 +1,6 @@
 {
   "name": "dropbox-api",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Javascript library for the Dropbox API",
   "main": "lib/dropbox.js",
   "scripts": {
