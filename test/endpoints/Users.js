@@ -1,4 +1,5 @@
-const test = require('tape').test;
+const test = require('../util/test');
+
 const Users = require('../../lib/endpoints/Users');
 const Endpoint = require('../../lib/endpoints/Endpoint');
 

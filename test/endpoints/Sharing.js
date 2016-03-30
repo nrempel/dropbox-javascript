@@ -1,4 +1,5 @@
-const test = require('tape').test;
+const test = require('../util/test');
+
 const Sharing = require('../../lib/endpoints/Sharing');
 const Endpoint = require('../../lib/endpoints/Endpoint');
 

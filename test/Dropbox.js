@@ -1,4 +1,5 @@
-const test = require('tape').test;
+const test = require('./util/test');
+
 const Dropbox = require('../lib/Dropbox');
 
 test('Dropbox._config should have sane defaults', (t) => {
@@ -20,14 +21,14 @@ test('Dropbox should fail if called as function', (t) => {
   t.end();
 });
 
-test('dropbox.setApiKey() should correctly set the key', (t) => {
+test('Dropbox.setApiKey() should correctly set the key', (t) => {
   const dropbox = new Dropbox('api-key');
   dropbox.setApiKey('other-key');
   t.same(dropbox._config.auth, 'Bearer other-key');
   t.end();
 });
 
-test('dropbox.setApiKey() should be a no-op if no key passed', (t) => {
+test('Dropbox.setApiKey() should be a no-op if no key passed', (t) => {
   const dropbox = new Dropbox('api-key');
   dropbox.setApiKey();
   t.same(dropbox._config.auth, 'Bearer api-key');

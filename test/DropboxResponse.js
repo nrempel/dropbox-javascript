@@ -1,4 +1,5 @@
-const test = require('tape').test;
+const test = require('./util/test');
+
 const DropboxResponse = require('../lib/DropboxResponse');
 
 test('DropboxResponse should initialize correctly', (t) => {

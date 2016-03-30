@@ -1,6 +1,8 @@
+const test = require('../util/test');
+
 const Dropbox = require('../../lib/Dropbox');
 const Endpoint = require('../../lib/endpoints/Endpoint');
-const test = require('../util/test');
+
 
 test('Endpoint should fail if called as function', (t) => {
   t.throws(() => {
@@ -11,7 +13,7 @@ test('Endpoint should fail if called as function', (t) => {
   t.end();
 });
 
-test('Endpoint catch error and return relevant info', (t) => {
+test('Endpoint should catch error and return relevant info', (t) => {
   const nock = test.nock;
   const errorMessage = 'this is an error';
 
