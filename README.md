@@ -6,6 +6,9 @@
 
 Javascript library for the Dropbox API
 
+
+work in progress
+
 [ci-image]: https://img.shields.io/circleci/project/nrempel/dropbox-javascript/master.svg
 [ci-url]: https://circleci.com/gh/nrempel/dropbox-javascript/tree/master
 [codeclimate-gpa-image]: https://codeclimate.com/github/nrempel/dropbox-javascript/badges/gpa.svg
