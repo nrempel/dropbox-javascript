@@ -7,12 +7,12 @@ class Endpoint {
     this._config = config;
   }
 
-  request(payload, callback) {
+  request(payload, path, callback) {
     const content = JSON.stringify(payload);
 
     const options = {
       host: `${this._config.rpcSubdomain}.${this._config.host}`,
-      path: `${this._config.basePath}${this.path}`,
+      path: `${this._config.basePath}${path}`,
       port: this._config.port,
       method: 'POST',
       headers: {
@@ -37,7 +37,7 @@ class Endpoint {
           try {
             parsedData = JSON.parse(data);
           } catch (error) {
-            callback(error, null);
+            callback(new Error(data), null);
             return;
           }
         }

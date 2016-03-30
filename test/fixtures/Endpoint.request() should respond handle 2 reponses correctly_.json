@@ -1,0 +1,10 @@
+[
+    {
+        "scope": "https://api.dropboxapi.com:443",
+        "method": "POST",
+        "path": "/2/respond_200",
+        "body": {},
+        "status": 200,
+        "response": "{}"
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "scope": "https://api.dropboxapi.com:443",
+        "method": "POST",
+        "path": "/2/malformed",
+        "body": {},
+        "status": 400,
+        "response": "Unknown API function: \"malformed\"."
+    }
+]

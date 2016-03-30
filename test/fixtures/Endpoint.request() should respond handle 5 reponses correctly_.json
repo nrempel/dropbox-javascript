@@ -1,0 +1,10 @@
+[
+    {
+        "scope": "https://api.dropboxapi.com:443",
+        "method": "POST",
+        "path": "/2/respond_500",
+        "body": {},
+        "status": 500,
+        "response": "Internal Server Error"
+    }
+]
